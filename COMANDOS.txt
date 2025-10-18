@@ -1,0 +1,113 @@
+═══════════════════════════════════════════════════════════════
+  COMANDOS RÁPIDOS - Calculadora RESICO
+═══════════════════════════════════════════════════════════════
+
+🚀 INICIAR APLICACIÓN
+─────────────────────────────────────────────────────────────
+npm run dev
+
+Luego abre: http://localhost:5173
+
+
+📦 REINSTALAR DEPENDENCIAS (si hay problemas)
+─────────────────────────────────────────────────────────────
+npm install
+
+
+🏗️ COMPILAR PARA PRODUCCIÓN
+─────────────────────────────────────────────────────────────
+npm run build
+
+Los archivos compilados estarán en la carpeta "dist"
+
+
+👀 PREVISUALIZAR BUILD DE PRODUCCIÓN
+─────────────────────────────────────────────────────────────
+npm run preview
+
+
+🧹 LIMPIAR NODE_MODULES Y REINSTALAR
+─────────────────────────────────────────────────────────────
+rmdir /s /q node_modules
+npm install
+
+
+📊 VER DEPENDENCIAS INSTALADAS
+─────────────────────────────────────────────────────────────
+npm list --depth=0
+
+
+🔍 VERIFICAR VERSIÓN DE NODE
+─────────────────────────────────────────────────────────────
+node --version
+
+(Requiere Node.js 16 o superior)
+
+
+🔍 VERIFICAR VERSIÓN DE NPM
+─────────────────────────────────────────────────────────────
+npm --version
+
+
+═══════════════════════════════════════════════════════════════
+  SOLUCIÓN DE PROBLEMAS
+═══════════════════════════════════════════════════════════════
+
+❌ Error: "Cannot find module"
+─────────────────────────────────────────────────────────────
+npm install
+
+
+❌ Error: "Port 5173 already in use"
+─────────────────────────────────────────────────────────────
+npm run dev -- --port 3000
+
+(Usa el puerto 3000 en lugar del 5173)
+
+
+❌ Error: "EACCES permission denied"
+─────────────────────────────────────────────────────────────
+Ejecuta la terminal como Administrador
+
+
+❌ La aplicación no carga en el navegador
+─────────────────────────────────────────────────────────────
+1. Verifica que el servidor esté corriendo
+2. Abre http://localhost:5173 manualmente
+3. Revisa la consola del navegador (F12)
+
+
+❌ Los PDFs no se procesan
+─────────────────────────────────────────────────────────────
+1. Verifica que sean PDFs con texto (no imágenes)
+2. Revisa la consola del navegador (F12) para ver errores
+3. Intenta con un PDF diferente
+
+
+═══════════════════════════════════════════════════════════════
+  ATAJOS DE TECLADO EN EL NAVEGADOR
+═══════════════════════════════════════════════════════════════
+
+F12              - Abrir consola de desarrollador
+Ctrl + Shift + I - Abrir consola de desarrollador
+Ctrl + R         - Recargar página
+Ctrl + Shift + R - Recargar página (sin caché)
+F5               - Recargar página
+
+
+═══════════════════════════════════════════════════════════════
+  ARCHIVOS DE AYUDA
+═══════════════════════════════════════════════════════════════
+
+📖 README.md              - Documentación completa
+📋 INSTRUCCIONES.md       - Guía detallada de uso
+📝 EJEMPLO_DATOS.md       - Ejemplos de datos de prueba
+🚀 INICIO_RAPIDO.txt      - Guía de inicio rápido
+📊 RESUMEN_PROYECTO.md    - Resumen del proyecto
+🎨 GUIA_VISUAL.md         - Guía visual de la interfaz
+💻 COMANDOS.txt           - Este archivo
+
+
+═══════════════════════════════════════════════════════════════
+
+Para iniciar: npm run dev

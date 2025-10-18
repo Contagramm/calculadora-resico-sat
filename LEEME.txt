@@ -1,0 +1,167 @@
+╔═══════════════════════════════════════════════════════════════╗
+║                                                               ║
+║              🧮 CALCULADORA RESICO - SAT 🇲🇽                  ║
+║                                                               ║
+║        Calcula tus declaraciones automáticamente              ║
+║           leyendo PDFs de facturas                            ║
+║                                                               ║
+╚═══════════════════════════════════════════════════════════════╝
+
+
+┌───────────────────────────────────────────────────────────────┐
+│  ✅ INSTALACIÓN COMPLETADA                                    │
+│                                                               │
+│  Todas las dependencias están instaladas y listas.            │
+│  Solo necesitas iniciar la aplicación.                        │
+└───────────────────────────────────────────────────────────────┘
+
+
+┌───────────────────────────────────────────────────────────────┐
+│  🚀 CÓMO INICIAR (3 PASOS)                                    │
+└───────────────────────────────────────────────────────────────┘
+
+  1️⃣  Abre una terminal en esta carpeta
+  
+  2️⃣  Ejecuta: npm run dev
+  
+  3️⃣  Abre tu navegador en: http://localhost:5173
+
+
+┌───────────────────────────────────────────────────────────────┐
+│  📱 CÓMO USAR LA APLICACIÓN                                   │
+└───────────────────────────────────────────────────────────────┘
+
+  ✓ Selecciona tipo: Emitidas (ingresos) o Recibidas (gastos)
+  
+  ✓ Arrastra tus PDFs a la zona de drop
+  
+  ✓ La app extrae automáticamente:
+    • Fecha
+    • Subtotal
+    • IVA
+    • Retenciones
+  
+  ✓ Revisa la tabla mensual con todos los cálculos
+  
+  ✓ Exporta a CSV o Excel
+
+
+┌───────────────────────────────────────────────────────────────┐
+│  🧮 QUÉ CALCULA AUTOMÁTICAMENTE                               │
+└───────────────────────────────────────────────────────────────┘
+
+  Para Facturas Emitidas:
+  ✓ IVA Trasladado (16%)
+  ✓ Retención IVA (10.6667%)
+  ✓ Retención ISR (1.25%)
+  ✓ Total Recibido
+  
+  Para Facturas Recibidas:
+  ✓ IVA Acreditable (16%)
+  
+  Cálculos Mensuales:
+  ✓ IVA a Pagar
+  ✓ Pago Mensual al SAT
+  ✓ Saldos a Favor (se arrastran automáticamente)
+  
+  Totales Anuales:
+  ✓ Suma de todos los meses
+  ✓ Saldo final
+
+
+┌───────────────────────────────────────────────────────────────┐
+│  📊 CARACTERÍSTICAS                                           │
+└───────────────────────────────────────────────────────────────┘
+
+  ✅ Lectura automática de PDFs con PDF.js
+  ✅ Interfaz drag & drop moderna
+  ✅ Tabla mensual expandible
+  ✅ Contador de facturas por mes
+  ✅ Filtros por tipo de factura
+  ✅ Exportación a CSV y Excel
+  ✅ Eliminar facturas individuales
+  ✅ Limpiar todos los datos
+  ✅ 100% privado (todo local en tu navegador)
+  ✅ Diseño responsive (funciona en móvil)
+
+
+┌───────────────────────────────────────────────────────────────┐
+│  📁 ARCHIVOS DE AYUDA                                         │
+└───────────────────────────────────────────────────────────────┘
+
+  📖 README.md              Documentación completa técnica
+  📋 INSTRUCCIONES.md       Guía paso a paso detallada
+  📝 EJEMPLO_DATOS.md       Ejemplos de datos para probar
+  🚀 INICIO_RAPIDO.txt      Guía de inicio rápido
+  📊 RESUMEN_PROYECTO.md    Resumen completo del proyecto
+  🎨 GUIA_VISUAL.md         Guía visual de la interfaz
+  💻 COMANDOS.txt           Comandos útiles
+  📄 LEEME.txt              Este archivo
+
+
+┌───────────────────────────────────────────────────────────────┐
+│  ⚠️  IMPORTANTE                                               │
+└───────────────────────────────────────────────────────────────┘
+
+  • Los PDFs deben contener TEXTO (no imágenes escaneadas)
+  
+  • Siempre revisa los datos extraídos antes de usarlos
+  
+  • Consulta con tu contador para la declaración oficial
+  
+  • Tus datos NUNCA salen de tu computadora
+  
+  • Exporta tus datos antes de cerrar el navegador
+
+
+┌───────────────────────────────────────────────────────────────┐
+│  🆘 AYUDA RÁPIDA                                              │
+└───────────────────────────────────────────────────────────────┘
+
+  ❌ No inicia:
+     → npm install
+     → npm run dev
+  
+  ❌ PDF no se lee:
+     → Verifica que sea PDF con texto
+     → Intenta con otro PDF
+  
+  ❌ Cálculos incorrectos:
+     → Revisa que las facturas estén bien clasificadas
+     → Haz clic en el mes para ver detalles
+
+
+┌───────────────────────────────────────────────────────────────┐
+│  🎯 EJEMPLO RÁPIDO                                            │
+└───────────────────────────────────────────────────────────────┘
+
+  Tienes 1 factura emitida de $10,000 en enero:
+  
+  Subtotal:           $10,000.00
+  + IVA (16%):        $ 1,600.00
+  - Ret. IVA (10.67%):$ 1,066.67
+  - Ret. ISR (1.25%): $   125.00
+  ═══════════════════════════════
+  TOTAL RECIBIDO:     $10,408.33 ✅
+  PAGO AL SAT:        $   533.33 💰
+
+
+┌───────────────────────────────────────────────────────────────┐
+│  🎉 ¡TODO LISTO!                                              │
+└───────────────────────────────────────────────────────────────┘
+
+  Tu calculadora RESICO está completamente funcional.
+  
+  Solo ejecuta: npm run dev
+  
+  Y abre: http://localhost:5173
+  
+  ¡Buena suerte con tus declaraciones! 🚀
+
+
+═══════════════════════════════════════════════════════════════
+
+Desarrollado con ❤️ para facilitar tus declaraciones RESICO
+Versión 1.0.0 - Octubre 2024
+
+═══════════════════════════════════════════════════════════════

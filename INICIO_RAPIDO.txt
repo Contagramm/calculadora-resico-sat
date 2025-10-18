@@ -1,0 +1,101 @@
+═══════════════════════════════════════════════════════════════
+  CALCULADORA RESICO - INICIO RÁPIDO
+═══════════════════════════════════════════════════════════════
+
+✅ INSTALACIÓN COMPLETADA
+
+Las dependencias ya están instaladas. Solo necesitas iniciar la app.
+
+═══════════════════════════════════════════════════════════════
+  PASO 1: INICIAR LA APLICACIÓN
+═══════════════════════════════════════════════════════════════
+
+1. Abre una terminal en esta carpeta
+2. Ejecuta: npm run dev
+3. Abre tu navegador en: http://localhost:5173
+
+═══════════════════════════════════════════════════════════════
+  PASO 2: USAR LA APLICACIÓN
+═══════════════════════════════════════════════════════════════
+
+SUBIR FACTURAS EMITIDAS (Ingresos):
+  1. Selecciona "Facturas Emitidas (Ingresos)"
+  2. Arrastra tus PDFs o haz clic para seleccionar
+  3. Espera a que se procesen
+
+SUBIR FACTURAS RECIBIDAS (Gastos):
+  1. Selecciona "Facturas Recibidas (Gastos)"
+  2. Arrastra tus PDFs o haz clic para seleccionar
+  3. Espera a que se procesen
+
+═══════════════════════════════════════════════════════════════
+  PASO 3: REVISAR Y EXPORTAR
+═══════════════════════════════════════════════════════════════
+
+- Revisa la tabla mensual con todos los cálculos
+- Haz clic en cualquier mes para ver detalles
+- Exporta a CSV o Excel cuando estés listo
+
+═══════════════════════════════════════════════════════════════
+  CÁLCULOS AUTOMÁTICOS
+═══════════════════════════════════════════════════════════════
+
+La aplicación calcula automáticamente:
+
+✓ IVA Trasladado (16%)
+✓ Retención IVA (10.6667%)
+✓ Retención ISR (1.25%)
+✓ IVA Acreditable
+✓ Pago Mensual al SAT
+✓ Saldos a Favor (se arrastran automáticamente)
+✓ Total Recibido
+
+═══════════════════════════════════════════════════════════════
+  CARACTERÍSTICAS
+═══════════════════════════════════════════════════════════════
+
+📄 Lectura automática de PDFs
+📊 Resumen mensual y anual
+💰 Cálculo de saldos a favor
+📈 Exportación a CSV y Excel
+🗑️ Gestión de facturas (eliminar, filtrar)
+🎨 Interfaz moderna y fácil de usar
+🔒 100% privado (todo se procesa en tu navegador)
+
+═══════════════════════════════════════════════════════════════
+  ARCHIVOS DE AYUDA
+═══════════════════════════════════════════════════════════════
+
+📖 README.md - Documentación completa
+📋 INSTRUCCIONES.md - Guía detallada de uso
+📝 EJEMPLO_DATOS.md - Ejemplos de datos de prueba
+
+═══════════════════════════════════════════════════════════════
+  SOLUCIÓN RÁPIDA DE PROBLEMAS
+═══════════════════════════════════════════════════════════════
+
+❌ No inicia la app:
+   → Ejecuta: npm install
+   → Luego: npm run dev
+
+❌ PDF no se lee bien:
+   → Verifica que sea PDF con texto (no imagen)
+   → Asegúrate de que tenga campos como "Subtotal", "IVA"
+
+❌ Cálculos incorrectos:
+   → Verifica que las facturas estén bien clasificadas
+   → Revisa los datos extraídos en la lista de facturas
+
+═══════════════════════════════════════════════════════════════
+  IMPORTANTE
+═══════════════════════════════════════════════════════════════
+
+⚠️ Siempre revisa los datos antes de usarlos para declaraciones
+⚠️ Consulta con tu contador para la declaración oficial
+⚠️ Los datos se procesan localmente (no se envían a internet)
+
+═══════════════════════════════════════════════════════════════
+
+¡Listo para usar! 🎉
+
+Para iniciar: npm run dev
