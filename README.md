@@ -1,170 +1,291 @@
-# Calculadora RESICO - SAT
+# 🧮 Calculadora RESICO - SAT México
 
-Aplicación web moderna para calcular declaraciones RESICO automáticamente mediante la lectura de PDFs de facturas.
+> Calculadora automática de declaraciones RESICO con lectura inteligente de facturas XML/PDF y detección de gastos no deducibles.
 
-## 🚀 Características
+[![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.0.8-646CFF.svg)](https://vitejs.dev/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind-3.3.6-38B2AC.svg)](https://tailwindcss.com/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-- **Lectura automática de PDFs**: Extrae datos de facturas automáticamente usando PDF.js
-- **Cálculos RESICO**: Calcula IVA trasladado (16%), Retenciones IVA (10.6667%), Retenciones ISR (1.25%)
-- **Gestión de facturas**: Clasifica facturas emitidas (ingresos) y recibidas (gastos)
-- **Resumen mensual**: Tabla interactiva con totales por mes
-- **Saldos a favor**: Calcula y arrastra saldos a favor automáticamente
-- **Exportación**: Exporta a CSV y Excel con todos los detalles
-- **Interfaz moderna**: Drag & drop, diseño responsive con Tailwind CSS
+---
 
-## 📋 Requisitos
+## 📋 Descripción
+
+Aplicación web moderna para calcular automáticamente tus declaraciones mensuales de **RESICO** (Régimen Simplificado de Confianza) en México. Lee facturas en formato **XML (CFDI)** o **PDF**, extrae los datos fiscales, calcula IVA, retenciones y pagos mensuales al SAT, y detecta automáticamente gastos no deducibles.
+
+### ✨ Características Principales
+
+- 📋 **Lectura de XML (CFDI 3.3 y 4.0)** - Precisión del 100%
+- 📄 **Lectura de PDF** - Extracción automática de datos
+- 🎯 **Detección de Gastos No Deducibles** - Identifica automáticamente gastos personales
+- 🧮 **Cálculos RESICO Automáticos** - IVA, retenciones, pagos mensuales
+- 💰 **Saldos a Favor** - Arrastre automático mes a mes
+- 📊 **Tabla Mensual Expandible** - Resumen completo por mes
+- 📈 **Totales Anuales** - Consolidado del año fiscal
+- 💾 **Exportación** - CSV y Excel con múltiples hojas
+- 🔒 **100% Privado** - Todo se procesa localmente en tu navegador
+- 🎨 **Interfaz Moderna** - Diseño responsive con Tailwind CSS
+
+---
+
+## 🚀 Demo
+
+![Calculadora RESICO](https://via.placeholder.com/800x400/4F46E5/FFFFFF?text=Calculadora+RESICO)
+
+---
+
+## 📦 Instalación
+
+### Requisitos Previos
 
 - Node.js 16 o superior
 - npm o yarn
 
-## 🔧 Instalación
+### Pasos de Instalación
 
-1. Instala las dependencias:
 ```bash
+# 1. Clonar el repositorio
+git clone https://github.com/tu-usuario/calculadora-resico.git
+cd calculadora-resico
+
+# 2. Instalar dependencias
 npm install
-```
 
-2. Inicia el servidor de desarrollo:
-```bash
+# 3. Iniciar servidor de desarrollo
 npm run dev
+
+# 4. Abrir en el navegador
+# http://localhost:5173
 ```
 
-3. Abre tu navegador en `http://localhost:5173`
+---
 
-## 📖 Uso
+## 🎯 Uso Rápido
 
-### 1. Subir Facturas
+### 1. Subir Facturas Emitidas (Ingresos)
 
-1. Selecciona el tipo de factura (Emitida o Recibida)
-2. Arrastra los PDFs a la zona de drop o haz clic para seleccionar
-3. La aplicación extraerá automáticamente:
-   - Fecha de la factura
-   - Subtotal
-   - IVA
-   - Retenciones (si están en el PDF)
-   - Total
+```
+1. Selecciona "Facturas Emitidas (Ingresos)"
+2. Haz clic en "XML (Recomendado)" o arrastra tus archivos
+3. El sistema extrae automáticamente todos los datos
+4. Verás el badge "✅ Deducible" en cada factura
+```
 
-### 2. Revisar Cálculos
+### 2. Subir Facturas Recibidas (Gastos)
 
-- **Tabla Mensual**: Muestra totales por mes con:
-  - Número de facturas emitidas y recibidas
-  - Subtotales e IVA
-  - Retenciones
-  - Pago mensual al SAT
-  - Saldo a favor acumulado
-  - Total recibido
+```
+1. Selecciona "Facturas Recibidas (Gastos)"
+2. Sube tus XMLs de gastos
+3. El sistema detecta automáticamente:
+   ✅ Gastos deducibles (se incluyen)
+   ❌ Gastos no deducibles (se excluyen)
+   ⚠️ Gastos limitados (alimentos 8.5%)
+```
 
-- **Detalles**: Haz clic en cualquier mes para ver detalles adicionales
+### 3. Revisar Cálculos
 
-### 3. Exportar Datos
+```
+- Tabla mensual con todos los cálculos
+- IVA a pagar
+- Retenciones
+- Pago mensual al SAT
+- Saldos a favor
+- Totales anuales
+```
 
-- **CSV**: Exporta resumen mensual y totales anuales
-- **Excel**: Exporta dos hojas:
-  - Resumen Mensual
-  - Detalle de todas las facturas
+### 4. Exportar Datos
 
-### 4. Gestionar Facturas
+```
+- CSV: Resumen mensual simple
+- Excel: Dos hojas (Resumen + Detalle)
+```
 
-- **Filtrar**: Filtra por tipo (Todas, Emitidas, Recibidas)
-- **Eliminar**: Elimina facturas individuales
-- **Limpiar Todo**: Elimina todos los datos
+---
 
 ## 🧮 Cálculos RESICO
 
-### Facturas Emitidas (Ingresos)
+### Para Facturas Emitidas (Ingresos):
 
-```
-IVA Trasladado = Subtotal × 16%
-Retención IVA = Subtotal × 10.6667%
-Retención ISR = Subtotal × 1.25%
-Total Recibido = Subtotal + IVA Trasladado - Retención IVA - Retención ISR
-```
+- **IVA Trasladado**: 16% del subtotal
+- **Retención IVA**: 10.6667% del subtotal
+- **Retención ISR**: 1.25% del subtotal
+- **Total Recibido**: Subtotal + IVA - Retenciones
 
-### Facturas Recibidas (Gastos)
+### Para Facturas Recibidas (Gastos):
 
-```
-IVA Acreditable = Subtotal × 16%
-```
+- **IVA Acreditable**: 16% del subtotal (solo gastos deducibles)
 
-### Pago Mensual al SAT
+### Cálculo Mensual:
 
-```
-IVA a Pagar = IVA Trasladado - IVA Acreditable - Retenciones IVA
-Pago Mensual = IVA a Pagar + Saldo a Favor del mes anterior
-```
+- **IVA a Pagar**: IVA Trasladado - IVA Acreditable - Retención IVA
+- **Pago Mensual**: IVA a Pagar (o $0 si hay saldo a favor)
+- **Saldo a Favor**: Se arrastra al siguiente mes automáticamente
 
-Si el IVA a Pagar es negativo, se genera un saldo a favor que se arrastra al siguiente mes.
+---
+
+## 🎯 Detección de Gastos No Deducibles
+
+El sistema detecta automáticamente y **excluye** de los cálculos:
+
+### ❌ No Deducibles:
+- Supermercados (Walmart, Soriana, Oxxo)
+- Streaming (Netflix, Spotify, HBO)
+- Gimnasios y fitness
+- Ropa y zapatos personales
+- Farmacias y medicamentos
+- Mascotas y veterinaria
+- Educación de hijos
+- Entretenimiento personal
+
+### ✅ Deducibles:
+- Equipo de trabajo (computadoras, software)
+- Renta de oficina y coworking
+- Capacitación profesional
+- Servicios contables y legales
+- Internet y telefonía (proporcional)
+- Transporte a reuniones
+
+### ⚠️ Limitados:
+- Alimentos y restaurantes (máx 8.5%)
+
+---
+
+## 📊 Tecnologías
+
+- **React 18.2** - Framework de UI
+- **Vite 5.0** - Build tool ultra rápido
+- **Tailwind CSS 3.3** - Framework de estilos
+- **PDF.js 3.11** - Lectura de PDFs
+- **XLSX 0.18** - Exportación a Excel
+- **Lucide React** - Iconos modernos
+
+---
 
 ## 📁 Estructura del Proyecto
 
 ```
-sat/
+calculadora-resico/
 ├── src/
-│   ├── components/
-│   │   ├── FileUploader.jsx      # Componente de carga de archivos
-│   │   ├── MonthlyTable.jsx      # Tabla de resumen mensual
-│   │   ├── InvoicesList.jsx      # Lista de facturas procesadas
-│   │   └── ActionButtons.jsx     # Botones de acción
-│   ├── utils/
-│   │   ├── pdfParser.js          # Extracción de datos de PDFs
-│   │   ├── resicoCalculator.js   # Cálculos RESICO
-│   │   └── exportUtils.js        # Exportación a CSV/Excel
-│   ├── App.jsx                   # Componente principal
-│   ├── main.jsx                  # Punto de entrada
-│   └── index.css                 # Estilos globales
-├── index.html
+│   ├── components/          # Componentes React
+│   │   ├── FileUploader.jsx
+│   │   ├── MonthlyTable.jsx
+│   │   ├── InvoicesList.jsx
+│   │   └── ActionButtons.jsx
+│   ├── utils/              # Utilidades
+│   │   ├── xmlParser.js    # Parser de XML/CFDI
+│   │   ├── pdfParser.js    # Parser de PDF
+│   │   ├── fileProcessor.js # Procesador universal
+│   │   ├── resicoCalculator.js # Cálculos RESICO
+│   │   ├── deductionValidator.js # Detección de gastos
+│   │   └── exportUtils.js  # Exportación CSV/Excel
+│   ├── App.jsx             # Componente principal
+│   ├── main.jsx            # Punto de entrada
+│   └── index.css           # Estilos globales
+├── public/                 # Archivos estáticos
+├── docs/                   # Documentación
+│   ├── INSTRUCCIONES.md
+│   ├── EJEMPLO_XML.md
+│   ├── DETECCION_GASTOS.md
+│   └── ACTUALIZACION_XML.md
 ├── package.json
 ├── vite.config.js
-└── tailwind.config.js
+├── tailwind.config.js
+└── README.md
 ```
 
-## 🎨 Tecnologías
+---
 
-- **React 18**: Framework de UI
-- **Vite**: Build tool y dev server
-- **Tailwind CSS**: Framework de estilos
-- **PDF.js**: Lectura de archivos PDF
-- **XLSX**: Exportación a Excel
-- **Lucide React**: Iconos modernos
+## 🔒 Privacidad y Seguridad
 
-## ⚠️ Notas Importantes
+- ✅ **100% Local** - Todo se procesa en tu navegador
+- ✅ **Sin Servidor** - No se envía información a internet
+- ✅ **Sin Cookies** - No se rastrea tu actividad
+- ✅ **Sin Almacenamiento** - Los datos no se guardan
+- ✅ **Código Abierto** - Puedes revisar el código
 
-1. **Extracción de PDFs**: La precisión depende del formato del PDF. Los PDFs escaneados o con formatos no estándar pueden no extraerse correctamente.
+---
 
-2. **Validación**: Siempre revisa los datos extraídos antes de usarlos para declaraciones oficiales.
+## 📖 Documentación Completa
 
-3. **Cálculos**: Los cálculos son aproximados según las tasas RESICO vigentes. Consulta con tu contador para la declaración oficial.
+- [Instrucciones de Uso](INSTRUCCIONES.md)
+- [Ejemplos de XML](EJEMPLO_XML.md)
+- [Detección de Gastos](DETECCION_GASTOS.md)
+- [Actualización XML](ACTUALIZACION_XML.md)
+- [Guía Visual](GUIA_VISUAL.md)
 
-4. **Privacidad**: Todos los datos se procesan localmente en tu navegador. No se envía información a ningún servidor.
+---
 
-## 🔍 Solución de Problemas
+## 🤝 Contribuir
 
-### El PDF no se procesa correctamente
+Las contribuciones son bienvenidas. Por favor:
 
-- Verifica que el PDF contenga texto (no sea una imagen escaneada)
-- Asegúrate de que el PDF tenga un formato estándar con campos como "Subtotal", "IVA", "Total"
-- Puedes editar manualmente los datos después de la extracción
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
 
-### Los montos no son correctos
+---
 
-- Revisa que el PDF tenga los campos claramente etiquetados
-- Verifica que los números usen el formato correcto (con puntos o comas)
-- Elimina la factura y súbela nuevamente, o edita manualmente
+## 📝 Roadmap
 
-### Error al exportar
+- [ ] Soporte para CFDI 4.0 completo
+- [ ] Importación desde Portal del SAT
+- [ ] Gráficas de ingresos/gastos
+- [ ] Comparación año anterior
+- [ ] Proyección anual
+- [ ] Modo oscuro
+- [ ] PWA (Progressive Web App)
+- [ ] Exportación a PDF
 
-- Asegúrate de tener al menos una factura procesada
-- Verifica que tu navegador permita descargas
-- Intenta con otro navegador si el problema persiste
+---
 
-## 📝 Licencia
+## ⚠️ Disclaimer
 
-Este proyecto es de código abierto y está disponible bajo la licencia MIT.
+Esta aplicación es una **herramienta de ayuda** para calcular tus declaraciones RESICO. Los cálculos son aproximados y deben ser **verificados por un contador profesional** antes de presentar tu declaración oficial al SAT.
 
-## 🤝 Contribuciones
+**No nos hacemos responsables** por errores en los cálculos o por el uso incorrecto de la información generada.
 
-Las contribuciones son bienvenidas. Por favor, abre un issue o pull request para sugerencias o mejoras.
+---
 
-## 📧 Soporte
+## 📄 Licencia
 
-Para preguntas o soporte, por favor abre un issue en el repositorio.
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+
+---
+
+## 👨‍💻 Autor
+
+**Tu Nombre**
+- GitHub: [@tu-usuario](https://github.com/tu-usuario)
+- Email: tu-email@ejemplo.com
+
+---
+
+## 🙏 Agradecimientos
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [PDF.js](https://mozilla.github.io/pdf.js/)
+- [Lucide Icons](https://lucide.dev/)
+
+---
+
+## 📞 Soporte
+
+Si tienes problemas o preguntas:
+
+1. Revisa la [documentación](docs/)
+2. Busca en [Issues](https://github.com/tu-usuario/calculadora-resico/issues)
+3. Crea un nuevo Issue si no encuentras solución
+
+---
+
+<div align="center">
+
+**⭐ Si te gusta este proyecto, dale una estrella en GitHub ⭐**
+
+Hecho con ❤️ para facilitar las declaraciones RESICO en México 🇲🇽
+
+</div>
